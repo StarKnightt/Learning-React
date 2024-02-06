@@ -7,12 +7,11 @@ function App() {
   const [count, setCount] = useState(2);
   const [showbtn, setshowbtn] = useState(false);
 
-  const Todo =()=> {(
+  const Todo = () => {
     <>
       <div className="todo">I am todo</div>
-    </>
-  )};
-  
+    </>;
+  };
 
   return (
     <>
