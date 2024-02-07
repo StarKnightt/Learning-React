@@ -1,47 +1,62 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import viteLogo from "/vite.svg"; // Assuming that 'vite.svg' is in the same directory as 'App.js'
 import "./App.css";
 
 function App() {
   const [count, setCount] = useState(2);
-  const [showbtn, setshowbtn] = useState(false);
+  const [showBtn, setShowBtn] = useState(false);
+  const [todos, setTodos] = useState([
+    {
+      title: "Hey everyone, I'm Prasen",
+      desc: "I am a good boy",
+    },
+    {
+      title: "Excited to learn",
+      desc: "I am an excellent boy",
+    },
+    {
+      title: "We can do it",
+      desc: "I am a genius boy",
+    },
+  ]);
 
-  const Todo = () => {
-    <>
-      <div className="todo">I am todo</div>
-    </>;
-  };
+  // const Todo = ({ todo }) => {
+  //   return (
+  //     <>
+  //       <div className="m-4 border border-1 border-red-400">
+
+  //         <div className="todo">{todo.title}</div>
+  //         <div className="todo">{todo.desc}</div>
+  //       </div>
+  //     </>
+  //   );
+  // };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      {showbtn ? (
-        <button>show btn is true</button>
+      {showBtn ? (
+        <button>Show btn is true</button>
       ) : (
-        <button>show btn is false</button>
+        <button>Show btn is false</button>
       )}
-      {/* {showbtn && <button>show btn is true</button>} */}
-      <Todo></Todo>
+      {/* {showBtn && <button>Show btn is true</button>} */}
+
+      {todos.map((todo) => {
+        // return <Todo key={todo.title} todo={todo} />;
+        return (
+          <div key={todo.title} className="m-4 border border-1 border-red-400">
+            <div className="todo">{todo.title}</div>
+            <div className="todo">{todo.desc}</div>
+          </div>
+        );
+      })}
+
       <div className="card">
-        <button onClick={() => setshowbtn(!showbtn)}>
+        <button onClick={() => setShowBtn(!showBtn)}>
           Toggle show btn {count}
         </button>
-        {/* <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p> */}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
