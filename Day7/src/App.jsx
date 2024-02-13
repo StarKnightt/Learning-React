@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   const handleClick = () =>{
-    alert("Hey I'm clicked")
+    alert("Hey I'm clicked");
   }
 
   return (
