@@ -13,6 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.red{
+  background-color: red;
+  color: white;
+  height: 233px;
+  width: 344px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
