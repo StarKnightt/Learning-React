@@ -21,7 +21,7 @@ This is a simple todo application built using React. It allows users to add, edi
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/StarKnightt/Learning-React/tree/main/TodoList
    ```
 
 2. Install dependencies:
