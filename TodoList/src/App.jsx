@@ -18,9 +18,8 @@ function App() {
       setTodos(todos); // Set the tasks in state
     }
   }, []);
-
   // Function to save tasks to local storage
-  const saveToLS = () => {
+  const saveToLS = () => { 
     localStorage.setItem("todos", JSON.stringify(todos)); // Convert tasks array to JSON string and store in local storage
   };
 
