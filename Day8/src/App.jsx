@@ -4,8 +4,6 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
 
-// 3:12
-
 function App() {
   const [count, setCount] = useState(0);
 
