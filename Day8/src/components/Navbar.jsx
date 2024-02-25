@@ -1,21 +1,34 @@
 import React from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
+// Navbar component with navigation links
 const Navbar = () => {
   return (
     <div>
       <ul>
-        <a href="/">
+        {/* NavLink components for navigation links */}
+        <NavLink
+          // Setting activeClassName to "red" when link is active
+          activeClassName="red"
+          to="/" // Link to the Home page
+        >
           <li>Home</li>
-        </a>
-        <a href="/">
+        </NavLink>
+        <NavLink
+          activeClassName="red"
+          to="/About" // Link to the About page
+        >
           <li>About</li>
-        </a>
-        <a href="/">
-          <li>Contact Us</li>
-        </a>
+        </NavLink>
+        <NavLink
+          activeClassName="red"
+          to="/Login" // Link to the Login page
+        >
+          <li>Login</li>
+        </NavLink>
       </ul>
     </div>
   );
 };
-export default Navbar;
+
+export default Navbar; // Exporting the Navbar component
