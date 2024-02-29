@@ -15,7 +15,7 @@ const nums = new Array(30_000_000).fill(0).map((_, i)=>{
 function App() {
   const [count, setCount] = useState(0)
   const [numbers, setnumbers] = useState(nums)
- 
+  
    const magical = numbers.find(item=>item.isMagical==true)
 
   return (
