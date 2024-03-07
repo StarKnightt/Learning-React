@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.red {
+  color: red;
+  font-size: 13px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
