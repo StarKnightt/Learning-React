@@ -39,20 +39,21 @@ function App() {
 
   return (
     <> 
-      {isSubmitting && <div>Loading...</div>}
+      {isSubmitting && <div>Loading...</div>}    
+      Validation Form
       <div className="container">
         <form action="" onSubmit={handleSubmit(onSubmit)}>
           <input placeholder='username' {...register("username", { 
             required: { value: true, message: "This field is required" }, 
             minLength: { value: 3, message: "Min length is 3" }, 
-            maxLength: { value: 8, message: "Max length is 8" } 
+            maxLength: { value: 10, message: "Max length is 10" } 
           })} type="text"   />
           {errors.username && <div className='red'>{errors.username.message}</div>}
           <br />
           <input placeholder='password'  {...register("password", {
             minLength: { value: 7, message: "Min length of password is 7" }
           })} type="password"/>
-          {errors.password && <div className='red'>{errors.password.message}</div>}
+          {errors.password && <div className='red'>{errors.password.message}</div>}k
           <br />
           <input disabled={isSubmitting} type="submit" value="Submit" />
           {errors.myform && <div className='red'>{errors.myform.message}</div>}
