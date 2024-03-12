@@ -31,6 +31,5 @@ function App() {
     </>
   )
 }
-
 export default App
 // 2:26 
