@@ -30,5 +30,8 @@ function App() {
     </>
   )
 }
+// I hope everything will be okay as soon as possible, why it's taking so much time for house repairing :(
+//  will be learning Redux as soon as possible bro, can't getting time because of this house repairing
 export default App
 // 2:26 
+
