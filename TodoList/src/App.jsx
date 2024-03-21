@@ -19,7 +19,7 @@ function App() {
     }
   }, []);
   // Function to save tasks to local storage
-  const saveToLS = () => { 
+  const saveToLS = () => {
     localStorage.setItem("todos", JSON.stringify(todos)); // Convert tasks array to JSON string and store in local storage
   };
 
@@ -81,7 +81,6 @@ function App() {
         <h1 className="font-bold text-center text-blue-600 text-xl mb-5">
           My Works 🕚
         </h1>
-
         {/* Add Task section */}
         <div className="addTodo my-5 flex flex-col gap-4">
           <h2 className="text-lg font-bold">Add a Task 👩🏻‍💻</h2>
@@ -99,7 +98,6 @@ function App() {
             Save
           </button>
         </div>
-
         {/* Toggle Show Finished Checkbox */}
         <input
           id="show"
@@ -111,10 +109,8 @@ function App() {
         <label className="mx-2" htmlFor="show">
           Show finished
         </label>
-
         {/* Divider */}
         <div className="h-[1px] bg-black opacity-25 w-[90%] my-2 mx-auto"></div>
-
         {/* Tasks List */}
         <h2 className="text-lg font-bold mt-5">Your Tasks</h2>
         <div className="todos">
