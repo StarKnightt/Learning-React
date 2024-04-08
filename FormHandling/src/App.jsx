@@ -66,7 +66,7 @@ function App() {
           {errors.password && (
             <div className="red">{errors.password.message}</div>
           )}
-          
+
           <br />
           <input disabled={isSubmitting} type="submit" value="Submit" />
           {errors.myform && <div className="red">{errors.myform.message}</div>}
