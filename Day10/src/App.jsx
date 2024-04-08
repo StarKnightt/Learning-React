@@ -13,7 +13,10 @@ function App() {
   const [numbers, setNumbers] = useState(nums);
 
   // const magical = numbers.find(item=>item.isMagical===true);  // expensive computation
-  const magical = useMemo(() => numbers.find((item) => item.isMagical === true), [numbers]);
+  const magical = useMemo(
+    () => numbers.find((item) => item.isMagical === true),
+    [numbers]
+  );
 
   return (
     <>
@@ -25,12 +28,14 @@ function App() {
           onClick={() => {
             setCount((count) => count + 1);
             if (count === 10) {
-              setNumbers(new Array(10_000_000).fill(0).map((_, i) => {
-                return {
-                  index: i,
-                  isMagical: i === 9_000_000,
-                };
-              }));
+              setNumbers(
+                new Array(10_000_000).fill(0).map((_, i) => {
+                  return {
+                    index: i,
+                    isMagical: i === 9_000_000,
+                  };
+                })
+              );
             }
           }}
         >
