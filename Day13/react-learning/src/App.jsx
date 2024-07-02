@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 
 const Person = (props) => {
-// This is a functional component that takes props as its parameter and renders a person's name, last name, and age. It's a reusable component designed to display information about a person.
+  // This is a functional component that takes props as its parameter and renders a person's name, last name, and age. It's a reusable component designed to display information about a person.
   // const FirstName = "John";
   // const SecondName = "Doe"
   // const firstname = "3";
@@ -10,7 +10,7 @@ const Person = (props) => {
   // const fullname = parseInt(firstname) + parseInt(lastname);
   return (
     <>
-      <h1>Name: {props.name} {props.lastname} {props.age } </h1>
+      <h1>Name: {props.name} {props.lastname} {props.age} </h1>
       <h2>Last name: {props.lastname}</h2>
       <h2>Age: {props.age}</h2>
       {/* <h1 className='hey'>Name:{(FirstName)} {(SecondName)}</h1> */}
@@ -18,16 +18,15 @@ const Person = (props) => {
     </>
   )
 }
+
 const App = () => {
   return (
     <div className="App">
       <Person name='john' z
-      lastname='Doe' 
-      age={25} 
+        lastname='Doe'
+        age={25}
       />
-      <Person name ='Marry' lastname='Doe' age={18}/>
- 
-
+      <Person name='Marry' lastname='Doe' age={18} />
       <h1>Hello {2 + 2}</h1>
     </div>
   );
